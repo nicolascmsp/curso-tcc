@@ -1,0 +1,14 @@
+<h1>LISTA DE CLIENTES</h1>
+<hr>
+<table class="table table-striped text-center">
+    <thead>
+        <td><b>Nome</b></td>
+        <td><b>Idade</b></td>
+        <td></td>
+    </thead>
+    <tr ng-repeat="item in vm.usuarios track by $index">
+        <td>{{item.nome}}</td>
+        <td>{{item.cpf}}</td>
+        <td><button type="button" class="btn btn-danger" ng-click="vm.remover($index)">REMOVER</button></td>
+    </tr>
+</table>

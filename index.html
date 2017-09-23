@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="libs/angular.min.js"></script>
+        <script type="text/javascript" src="libs/angular-ui-router.min.js"></script>
+
+        <!-- Nativo -->
+        <script type="text/javascript" src="src/app.js"></script>
+        <!-- Controllers -->
+        <script type="text/javascript" src="src/controllers/templateController.js"></script>
+        <script type="text/javascript" src="src/controllers/clienteController.js"></script>
+
+        <!-- Bootstrap   -->
+        <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+
+        <title>Toten Party</title>
+    </head>
+    <body class="container">
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Party Token</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a ui-sref="inicio">Inicio</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a ui-sref="clientes">Clientes</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <ui-view></ui-view>
+    </body>
+</html>
