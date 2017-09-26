@@ -1,0 +1,31 @@
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">{{vm.metodo}} NOVO USUÁRIO</h4>
+                    </div>
+                    <div class="content">
+                        <form name="usuarioForm">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" placeholder="Digite seu nome" ng-required="true" ng-model="vm.usuario.nome">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" placeholder="Digite sua idade" ng-required="true" ng-model="vm.usuario.idade">
+                                </div>
+                            </div>
+                        </form>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="button" class="btn pull-left" ui-sref="usuarios">VOLTAR</button>
+                                <button type="button" class="btn btn-primary pull-right" ng-disabled="usuarioForm.$invalid" ng-click="vm.adicionarUsuario(vm.usuario)">ADICIONAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

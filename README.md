@@ -1,7 +1,11 @@
-<h1>Depedências:</h1>
-<h3>Servidor de aplicação web</h3>
-<h3>Exemplo: Node "http-server"</h3>
+<h3>Depedências</h3>
+Instalar nodejs
+
+Instalar npm (Node Package Manager)
+
+Instalar http-server
+    npm i http-server -g
 
 
-<h1>Como executar:</h1>
+<h3>Executar</h3>
 $ http-server -c-1

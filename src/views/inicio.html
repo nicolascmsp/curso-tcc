@@ -1,37 +1,56 @@
-<h1>{{vm.titulo}}</h1>
-
-<hr>
-
-<form name="usuarioForm">
-    <div class="row">
-        <div class="col-md-4">
-            <h3>ADICIONAR NOVO USUÁRIO</h3>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">
+                <div class="card">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <div class="icon-big icon-success text-center">
+                                    <i class="ti-wallet"></i>
+                                </div>
+                            </div>
+                            <div class="col-xs-7">
+                                <div class="numbers">
+                                    <p>Total Caixa</p>
+                                    R$9.345,55
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <hr />
+                            <div class="stats">
+                                <i class="ti-calendar"></i> Hoje
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="card">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <div class="icon-big icon-info text-center">
+                                    <i class="ti-twitter-alt"></i>
+                                </div>
+                            </div>
+                            <div class="col-xs-7">
+                                <div class="numbers">
+                                    <p>Nome na lista</p>
+                                    +45
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <hr />
+                            <div class="stats">
+                                <i class="ti-reload"></i> Atualizado á 30 min
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-4">
-            <input type="text" class="form-control" placeholder="Digite seu nome" ng-required="true" ng-model="vm.usuario.nome">
-        </div>
-        <div class="col-md-4">
-            <input type="text" class="form-control" placeholder="Digite sua idade" ng-required="true" ng-model="vm.usuario.idade">
-        </div>
-        <div class="col-md-2">
-            <button type="button" class="btn btn-primary" ng-disabled="usuarioForm.$invalid" ng-click="vm.adicionarUsuario(vm.usuario)">ADICIONAR</button>
-        </div>
-    </div>
-</form>
-
-<hr>
-
-<table class="table table-striped text-center">
-    <thead>
-        <td><b>Nome</b></td>
-        <td><b>Idade</b></td>
-        <td></td>
-    </thead>
-    <tr ng-repeat="item in vm.usuarios track by $index">
-        <td>{{item.nome}}</td>
-        <td>{{item.idade}}</td>
-        <td><button type="button" class="btn btn-danger" ng-click="vm.remover($index)">REMOVER</button></td>
-    </tr>
-</table>
+</div>

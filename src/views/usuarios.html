@@ -1,0 +1,27 @@
+<div class="content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="header">
+                <h4 class="title">LISTA DE USUÁRIOS</h4>
+                <p class="category">Usuários cadastrados</p>
+                <button type="button" class="btn btn-primary pull-right" ui-sref="usuario-cad">CADASTRAR</button>
+            </div>
+            <div class="content table-responsive table-full-width">
+                <table class="table table-striped">
+                    <thead>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in vm.usuarios track by $index" ng-click="vm.goToEdit(item)">
+                            <td>{{item.nome}}</td>
+                            <td>{{item.idade}}</td>
+                            <td><button type="button" class="btn btn-danger" ng-click="vm.remover($index)">REMOVER</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

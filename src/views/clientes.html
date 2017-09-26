@@ -1,14 +1,32 @@
-<h1>LISTA DE CLIENTES</h1>
-<hr>
-<table class="table table-striped text-center">
-    <thead>
-        <td><b>Nome</b></td>
-        <td><b>Idade</b></td>
-        <td></td>
-    </thead>
-    <tr ng-repeat="item in vm.usuarios track by $index">
-        <td>{{item.nome}}</td>
-        <td>{{item.cpf}}</td>
-        <td><button type="button" class="btn btn-danger" ng-click="vm.remover($index)">REMOVER</button></td>
-    </tr>
-</table>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">LISTA DE CLIENTE</h4>
+                        <p class="category">Clientes cadastrados</p>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-striped">
+                            <thead>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Data Nasc</th>
+                                <th></th>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in vm.usuarios track by $index">
+                                    <td>{{item.nome}}</td>
+                                    <td>{{item.cpf}}</td>
+                                    <td>{{item.dataNasc}}</td>
+                                    <td><button type="button" class="btn btn-danger" ng-click="vm.remover($index)">REMOVER</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

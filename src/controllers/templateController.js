@@ -1,21 +1,16 @@
 class TemplateController {
-    constructor() {
-        this.titulo = 'Party Token';
+    activeMenu(menu) {
+        var MENU = ['painelGeral', 'usuarios', 'clientes'];
+        var hasMenu = MENU.filter(function(item) {
+            return item === menu;
+        });
+        if (!hasMenu.length) return;
 
-        this.usuarios = [
-            { nome: 'Robson', idade: 21 },
-            { nome: 'Nick', idade: 23 }
-        ];
-    }
-
-    adicionarUsuario(usuario) {
-        this.usuarios.push(angular.copy(usuario));
-        usuario.nome = '';
-        usuario.idade = '';
-    }
-
-    remover(index) {
-        this.usuarios.splice(index, 1);
+        MENU.map(function(item) {
+            if (document.getElementById(item))
+                return document.getElementById(item).classList.remove('active');
+        });
+        document.getElementById(menu).classList.add('active');
     }
 }
 
