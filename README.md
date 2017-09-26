@@ -1,11 +1,12 @@
 <h3>Depedências</h3>
 Instalar nodejs
-
+<br>
 Instalar npm (Node Package Manager)
-
+<br>
 Instalar http-server
-    npm i http-server -g
+<br>
+npm i http-server -g
 
 
 <h3>Executar</h3>
-$ http-server -c-1
+http-server -c-1
